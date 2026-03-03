@@ -8,7 +8,7 @@ This site consolidates governance guidance, security frameworks, and regulated p
 
 ## Available Turtini Documentation Sets
 
-- [GitHub for Government](/projects/github-for-government/en/latest/)
-- [Public Sector Security](/projects/public-sector-security/en/latest/)
-- [Zero Trust](/projects/zero-trust/en/latest/)
-- [CLI Cheat Sheets](/projects/cli-cheat-sheets/en/latest/)
+- [GitHub for Government](https://docs.turtini.com/projects/github-for-government/en/latest/)
+- [Public Sector Security](https://docs.turtini.com/projects/public-sector-security/en/latest/)
+- [Zero Trust](https://docs.turtini.com/projects/zero-trust/en/latest/)
+- [CLI Cheat Sheets](https://docs.turtini.com/projects/cli-cheat-sheets/en/latest/)
