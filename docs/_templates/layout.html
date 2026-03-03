@@ -1,5 +1,17 @@
 {% extends "!layout.html" %}
 
+{# ============================
+   Override sidebar logo link
+   ============================ #}
+{% block sidebartitle %}
+  <a href="https://docs.turtini.com/" class="icon icon-home">
+    {% if logo %}
+      <img src="{{ pathto('_static/turtini-logo.png', 1) }}" class="logo" alt="Turtini Docs"/>
+    {% endif %}
+    {{ project }}
+  </a>
+{% endblock %}
+
 {% block extrahead %}
   {{ super() }}
   <link rel="icon" type="image/x-icon" href="{{ pathto('_static/favicon.ico', 1) }}">
