@@ -14,6 +14,9 @@ This site consolidates governance guidance, security frameworks, and regulated p
 - [CLI Cheat Sheets](https://docs.turtini.com/projects/cli-cheat-sheets/en/latest/)
 
 ## Turtini Training Loop
+![Training Loop](_static/training-loop-logo.png)
+
+Short operational demos for learning real infrastructure workflows.
 
 - [AWS EC2 VM Creation Demo](https://docs.turtini.com/projects/aws-vm-demo/en/latest/README.html#)
 - [OpenShift Virtualization VM Creation Demo](https://docs.turtini.com/projects/openshift-vm-demo/en/latest/)
