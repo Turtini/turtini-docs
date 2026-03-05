@@ -1,4 +1,4 @@
-# Turtini Documentation
+# Turtini Documentation & Training Loop by Turtini
 
 Welcome to Turtini’s institutional documentation and Training Loop platform.
 
