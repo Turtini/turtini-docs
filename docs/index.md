@@ -8,10 +8,10 @@ This site consolidates governance guidance, security frameworks, and regulated p
 
 ## Resources
 
-- [GitHub for Government](https://docs.turtini.com/projects/github-for-government/en/latest/)
-- [Public Sector Security](https://docs.turtini.com/projects/public-sector-security/en/latest/)
-- [Zero Trust](https://docs.turtini.com/projects/zero-trust/en/latest/)
-- [CLI Cheat Sheets](https://docs.turtini.com/projects/cli-cheat-sheets/en/latest/)
+- [**GitHub for Government**](https://docs.turtini.com/projects/github-for-government/en/latest/)
+- [**Public Sector Security**](https://docs.turtini.com/projects/public-sector-security/en/latest/)
+- [**Zero Trust**](https://docs.turtini.com/projects/zero-trust/en/latest/)
+- [**CLI Cheat Sheets**](https://docs.turtini.com/projects/cli-cheat-sheets/en/latest/)
 
 ---
 
@@ -20,5 +20,5 @@ This site consolidates governance guidance, security frameworks, and regulated p
 ![Training Loop](_static/training-loop-logo.png)
 </div>
 
-- [AWS EC2 VM Creation Demo](https://docs.turtini.com/projects/aws-vm-demo/en/latest/README.html#)
-- [OpenShift Virtualization VM Creation Demo](https://docs.turtini.com/projects/openshift-vm-demo/en/latest/)
+- [**AWS EC2 VM Creation Demo**](https://docs.turtini.com/projects/aws-vm-demo/en/latest/README.html#)
+- [**OpenShift Virtualization VM Creation Demo**](https://docs.turtini.com/projects/openshift-vm-demo/en/latest/)
