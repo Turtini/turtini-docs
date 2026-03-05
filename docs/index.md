@@ -13,8 +13,7 @@ This site consolidates governance guidance, security frameworks, and regulated p
 - [Zero Trust](https://docs.turtini.com/projects/zero-trust/en/latest/)
 - [CLI Cheat Sheets](https://docs.turtini.com/projects/cli-cheat-sheets/en/latest/)
 
-<div align="center">
-<img src="_static/training-loop-logo.png" width="350">
+![Training Loop](_static/training-loop-logo.png)
 </div>
 
 Short operational demos for learning real infrastructure workflows.
