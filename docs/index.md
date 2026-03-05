@@ -1,12 +1,12 @@
-# Turtini Documentation & Training Loop by Turtini
+# Resources & Training Loop by Turtini
 
-Welcome to Turtini’s institutional documentation and Training Loop platform.
+Welcome to Turtini’s resoures and Training Loop platform.
 
 This site consolidates governance guidance, security frameworks, and regulated platform documentation aligned with U.S. federal environments. It also includes short operational demos for learning real infrastructure workflows.
 
 ---
 
-## Available Turtini Documentation Sets
+## Resources
 
 - [GitHub for Government](https://docs.turtini.com/projects/github-for-government/en/latest/)
 - [Public Sector Security](https://docs.turtini.com/projects/public-sector-security/en/latest/)
@@ -15,7 +15,7 @@ This site consolidates governance guidance, security frameworks, and regulated p
 
 ---
 
-## Available Training Loop by Turtini Demo Sets
+## Training Loop by Turtini
 
 ![Training Loop](_static/training-loop-logo.png)
 </div>
