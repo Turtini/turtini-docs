@@ -1,6 +1,6 @@
 # Turtini Documentation
 
-Welcome to Turtini’s institutional documentation platform.
+Welcome to Turtini’s institutional documentation and Training Loop platform.
 
 This site consolidates governance guidance, security frameworks, and regulated platform documentation aligned with U.S. federal environments.
 
