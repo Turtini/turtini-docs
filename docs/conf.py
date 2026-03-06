@@ -46,22 +46,30 @@ exclude_patterns = [
 # Theme configuration
 # -----------------------------------------------------
 
-html_theme = "turtini_sphinx_theme"
+html_theme = "sphinx_rtd_theme"
 
-# Load theme from installed package
-html_theme_path = [get_theme_paths()["theme"]]
+html_theme_options = {
+    "collapse_navigation": False,
+    "navigation_depth": 4,
+}
+
+
+# -----------------------------------------------------
+# Shared theme assets from turtini-sphinx-theme
+# -----------------------------------------------------
+
+_paths = get_theme_paths()
+
+templates_path = [_paths["templates"]]
+html_static_path = ["_static", _paths["static"]]
 
 
 # -----------------------------------------------------
 # Branding
 # -----------------------------------------------------
 
-# These should exist in docs/_static/
 html_logo = "_static/turtini-logo.png"
 html_favicon = "_static/favicon.ico"
-
-# Only local static assets (images, etc)
-html_static_path = ["_static"]
 
 
 # -----------------------------------------------------
