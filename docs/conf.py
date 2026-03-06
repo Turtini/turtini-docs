@@ -27,11 +27,8 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
 
 # ---- Theme ----
-html_theme = "sphinx_rtd_theme"
-html_theme_options = {
-    "collapse_navigation": False,
-    "navigation_depth": 4,
-}
+html_theme = "turtini_sphinx_theme"
+html_theme_path = get_theme_paths()["theme"]
 
 
 # ---- MyST ----
