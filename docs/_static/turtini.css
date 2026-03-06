@@ -78,26 +78,27 @@ h6 {
   background: rgba(255, 255, 255, 0.08);
 }
 
+/* Mobile top nav */
 .wy-nav-top {
   background: var(--turtini-brand-dark) !important;
 }
 
 /* =========================
-   Global top header
+   Shell-level header injected by JS
    ========================= */
-.turtini-global-header {
+.turtini-shell-header {
   position: fixed;
   top: 0;
-  left: 300px;   /* RTD desktop sidebar width */
+  left: 300px;
   right: 0;
   height: var(--turtini-header-height);
-  z-index: 3000;
+  z-index: 9999;
   background: var(--turtini-brand);
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
 
-.turtini-header-inner {
+.turtini-shell-header-inner {
   max-width: 920px;
   height: 100%;
   margin: 0 auto;
@@ -107,31 +108,30 @@ h6 {
   align-items: center;
 }
 
-.turtini-header-right {
+.turtini-shell-nav {
   display: flex;
   align-items: center;
   gap: 24px;
 }
 
-.turtini-global-header a {
+.turtini-shell-nav a {
   color: #ffffff;
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
 }
 
-.turtini-global-header a:hover {
+.turtini-shell-nav a:hover {
   color: var(--turtini-hover);
   text-decoration: underline;
 }
 
-/* Push the whole RTD shell down below the fixed header */
-.wy-grid-for-nav {
+/* Push the docs shell below the fixed bar only after JS enables it */
+body.turtini-shell-header-enabled .wy-grid-for-nav {
   padding-top: var(--turtini-header-height);
 }
 
-/* Keep sidebar aligned below the header */
-.wy-nav-side {
+body.turtini-shell-header-enabled .wy-nav-side {
   top: var(--turtini-header-height);
 }
 
@@ -234,28 +234,24 @@ h6 {
    Responsive adjustments
    ========================= */
 @media screen and (max-width: 768px) {
-  .turtini-global-header {
+  .turtini-shell-header {
     left: 0;
   }
 
-  .turtini-header-inner {
+  .turtini-shell-header-inner {
     max-width: none;
     padding: 0 16px;
   }
 
-  .turtini-header-right {
+  .turtini-shell-nav {
     gap: 18px;
   }
 
-  .wy-grid-for-nav {
+  body.turtini-shell-header-enabled .wy-grid-for-nav {
     padding-top: var(--turtini-header-height);
   }
 
-  .wy-nav-side {
+  body.turtini-shell-header-enabled .wy-nav-side {
     top: 0;
   }
-}
-
-.turtini-global-header {
-  z-index: 9999;
 }
