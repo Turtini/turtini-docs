@@ -87,26 +87,24 @@ h6 {
 /* =========================
    Global Top Header
    ========================= */
+
 .turtini-global-header {
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
-  height: 56px;
-  z-index: 2000;
+  z-index: 1000;
   width: 100%;
   background: var(--turtini-brand);
   color: #ffffff;
   font-size: 0.9rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  border-radius: 0 0 6px 6px;
 }
 
 .turtini-header-inner {
-  max-width: 1200px;
-  height: 56px;
-  margin: 0 auto;
-  padding: 0 18px;
+  width: 100%;
+  margin: 0;
+  padding: 10px 18px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -131,16 +129,6 @@ h6 {
 .turtini-global-header a:hover {
   color: var(--turtini-hover);
   text-decoration: underline;
-}
-
-/* Push RTD shell below fixed header */
-.wy-grid-for-nav {
-  padding-top: 56px;
-}
-
-/* Keep sidebar from sliding under top header */
-.wy-nav-side {
-  top: 56px;
 }
 
 /* =========================
