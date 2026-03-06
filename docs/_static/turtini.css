@@ -2,7 +2,6 @@
    Turtini docs theme overrides (Sphinx RTD theme)
 */
 
-/* --- Brand knobs --- */
 :root {
   --turtini-brand: #2a53cd;
   --turtini-brand-dark: #2a53cd;
@@ -14,9 +13,6 @@
   --turtini-header-height: 52px;
 }
 
-/* =========================
-   Global Font Override
-   ========================= */
 html,
 body,
 .wy-body-for-nav,
@@ -33,6 +29,7 @@ h5,
 h6 {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif !important;
   font-weight: 600;
+  scroll-margin-top: 80px;
 }
 
 .wy-body-for-nav p {
@@ -40,18 +37,6 @@ h6 {
   margin-bottom: 0.9em;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  scroll-margin-top: 80px;
-}
-
-/* =========================
-   Left Sidebar + Search Header
-   ========================= */
 .wy-side-scroll,
 .wy-nav-side {
   background: var(--turtini-brand);
@@ -78,15 +63,12 @@ h6 {
   background: rgba(255, 255, 255, 0.08);
 }
 
-/* Mobile top nav */
 .wy-nav-top {
   background: var(--turtini-brand-dark) !important;
 }
 
-/* =========================
-   Shell-level header injected by JS
-   ========================= */
-.turtini-shell-header {
+/* Header rendered inside content block, but fixed to main pane */
+.turtini-global-header {
   position: fixed;
   top: 0;
   left: 300px;
@@ -98,7 +80,7 @@ h6 {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
 
-.turtini-shell-header-inner {
+.turtini-header-inner {
   max-width: 920px;
   height: 100%;
   margin: 0 auto;
@@ -108,36 +90,33 @@ h6 {
   align-items: center;
 }
 
-.turtini-shell-nav {
+.turtini-header-right {
   display: flex;
   align-items: center;
   gap: 24px;
 }
 
-.turtini-shell-nav a {
+.turtini-global-header a {
   color: #ffffff;
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
 }
 
-.turtini-shell-nav a:hover {
+.turtini-global-header a:hover {
   color: var(--turtini-hover);
   text-decoration: underline;
 }
 
-/* Push the docs shell below the fixed bar only after JS enables it */
-body.turtini-shell-header-enabled .wy-grid-for-nav {
+/* Push shell down to make room for fixed bar */
+.wy-grid-for-nav {
   padding-top: var(--turtini-header-height);
 }
 
-body.turtini-shell-header-enabled .wy-nav-side {
+.wy-nav-side {
   top: var(--turtini-header-height);
 }
 
-/* =========================
-   Links
-   ========================= */
 a {
   color: var(--turtini-brand);
   transition: color 0.15s ease-in-out;
@@ -147,16 +126,10 @@ a:hover {
   color: var(--turtini-hover);
 }
 
-/* =========================
-   Content width
-   ========================= */
 .wy-nav-content {
   max-width: 920px;
 }
 
-/* =========================
-   Headings
-   ========================= */
 h1 {
   color: var(--turtini-brand);
   font-weight: 700;
@@ -176,9 +149,6 @@ h6 {
   color: #1f3ea8;
 }
 
-/* =========================
-   Breadcrumbs
-   ========================= */
 .wy-breadcrumbs {
   font-size: 13px;
   border-bottom: 1px solid rgba(42, 83, 205, 0.15);
@@ -198,9 +168,6 @@ h6 {
   color: #555;
 }
 
-/* =========================
-   Banner / Notice
-   ========================= */
 .turtini-banner {
   margin: 14px 0 20px 0;
   padding: 14px 16px;
@@ -213,9 +180,6 @@ h6 {
   line-height: 1.5;
 }
 
-/* =========================
-   Footer Styling
-   ========================= */
 .turtini-footer {
   max-width: 1200px;
   margin: 28px auto 0;
@@ -230,28 +194,25 @@ h6 {
   color: var(--turtini-text-muted-2);
 }
 
-/* =========================
-   Responsive adjustments
-   ========================= */
 @media screen and (max-width: 768px) {
-  .turtini-shell-header {
+  .turtini-global-header {
     left: 0;
   }
 
-  .turtini-shell-header-inner {
+  .turtini-header-inner {
     max-width: none;
     padding: 0 16px;
   }
 
-  .turtini-shell-nav {
+  .turtini-header-right {
     gap: 18px;
   }
 
-  body.turtini-shell-header-enabled .wy-grid-for-nav {
+  .wy-grid-for-nav {
     padding-top: var(--turtini-header-height);
   }
 
-  body.turtini-shell-header-enabled .wy-nav-side {
+  .wy-nav-side {
     top: 0;
   }
 }
