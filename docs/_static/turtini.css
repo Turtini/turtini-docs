@@ -255,3 +255,7 @@ h6 {
     top: 0;
   }
 }
+
+.turtini-global-header {
+  z-index: 9999;
+}
