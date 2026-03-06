@@ -18,6 +18,23 @@
 {% endblock %}
 
 {# ============================
+   Global header above RTD shell
+   ============================ #}
+{% block body %}
+  <div class="turtini-global-header" role="navigation" aria-label="Turtini global navigation">
+    <div class="turtini-header-inner">
+      <div class="turtini-header-right">
+        <a href="https://turtini.com/" target="_blank" rel="noopener">Turtini</a>
+        <a href="https://turtini.com/events" target="_blank" rel="noopener">Events</a>
+        <a href="https://trident.turtini.com/login" target="_blank" rel="noopener">Trident</a>
+      </div>
+    </div>
+  </div>
+
+  {{ super() }}
+{% endblock %}
+
+{# ============================
    Banner inside the content area
    ============================ #}
 {% block content %}
