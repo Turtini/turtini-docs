@@ -18,11 +18,9 @@
 {% endblock %}
 
 {# ============================
-   Top global header (full-width, sticky)
+   Header + banner inside content block
    ============================ #}
-{% block extrabody %}
-  {{ super() }}
-
+{% block content %}
   <div class="turtini-global-header" role="navigation" aria-label="Turtini global navigation">
     <div class="turtini-header-inner">
       <div class="turtini-header-right">
@@ -32,12 +30,7 @@
       </div>
     </div>
   </div>
-{% endblock %}
 
-{# ============================
-   Banner inside the content area (under breadcrumbs)
-   ============================ #}
-{% block content %}
   <div class="turtini-banner" role="note" aria-label="Documentation notice">
     <strong>Notice:</strong> This is Turtini’s official plain-language documentation for federal and regulated environments.
   </div>
