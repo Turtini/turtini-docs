@@ -197,7 +197,7 @@ h6 {
    Banner / Notice
    ========================= */
 .turtini-banner {
-  margin: 16px 0 20px 0;
+  margin: 72px 0 20px 0;
   padding: 14px 16px;
   border: 1px solid var(--turtini-border);
   border-left: 6px solid var(--turtini-hover);
@@ -245,4 +245,25 @@ h6 {
 
 .turtini-footer .last-updated {
   color: var(--turtini-text-muted-2);
+}
+
+/* =========================
+   Responsive adjustments
+   ========================= */
+@media screen and (max-width: 768px) {
+  .turtini-global-header {
+    left: 0;
+  }
+
+  .turtini-header-inner {
+    padding: 10px 16px;
+  }
+
+  .turtini-header-right {
+    gap: 18px;
+  }
+
+  .turtini-banner {
+    margin-top: 72px;
+  }
 }
