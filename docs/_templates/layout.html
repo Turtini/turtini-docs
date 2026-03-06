@@ -1,8 +1,5 @@
 {% extends "!layout.html" %}
 
-{# ============================
-   Sidebar logo override
-   ============================ #}
 {% block sidebartitle %}
   <a href="https://docs.turtini.com/" class="icon icon-home">
     {% if logo %}
@@ -15,32 +12,8 @@
 {% block extrahead %}
   {{ super() }}
   <link rel="icon" type="image/x-icon" href="{{ pathto('_static/favicon.ico', 1) }}">
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      if (document.querySelector(".turtini-shell-header")) return;
-
-      const header = document.createElement("div");
-      header.className = "turtini-shell-header";
-      header.innerHTML = `
-        <div class="turtini-shell-header-inner">
-          <nav class="turtini-shell-nav" aria-label="Turtini global navigation">
-            <a href="https://turtini.com/" target="_blank" rel="noopener">Turtini</a>
-            <a href="https://turtini.com/events" target="_blank" rel="noopener">Events</a>
-            <a href="https://trident.turtini.com/login" target="_blank" rel="noopener">Trident</a>
-          </nav>
-        </div>
-      `;
-
-      document.body.appendChild(header);
-      document.body.classList.add("turtini-shell-header-enabled");
-    });
-  </script>
 {% endblock %}
 
-{# ============================
-   Banner inside content
-   ============================ #}
 {% block content %}
   <div class="turtini-banner" role="note" aria-label="Documentation notice">
     <strong>Notice:</strong> This is Turtini’s official plain-language documentation for federal and regulated environments.
@@ -49,9 +22,6 @@
   {{ super() }}
 {% endblock %}
 
-{# ============================
-   Footer
-   ============================ #}
 {% block footer %}
   {{ super() }}
 
