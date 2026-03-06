@@ -1,7 +1,7 @@
 {% extends "!layout.html" %}
 
 {# ============================
-   Override sidebar logo link
+   Sidebar logo override
    ============================ #}
 {% block sidebartitle %}
   <a href="https://docs.turtini.com/" class="icon icon-home">
@@ -18,9 +18,11 @@
 {% endblock %}
 
 {# ============================
-   Global header above RTD shell
+   Global Turtini header
    ============================ #}
-{% block body %}
+{% block extrabody %}
+  {{ super() }}
+
   <div class="turtini-global-header" role="navigation" aria-label="Turtini global navigation">
     <div class="turtini-header-inner">
       <div class="turtini-header-right">
@@ -30,12 +32,10 @@
       </div>
     </div>
   </div>
-
-  {{ super() }}
 {% endblock %}
 
 {# ============================
-   Banner inside the content area
+   Banner inside content
    ============================ #}
 {% block content %}
   <div class="turtini-banner" role="note" aria-label="Documentation notice">
