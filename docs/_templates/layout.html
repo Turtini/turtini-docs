@@ -12,10 +12,19 @@
 {% block extrahead %}
   {{ super() }}
   <link rel="icon" type="image/x-icon" href="{{ pathto('_static/favicon.ico', 1) }}">
-  <script defer src="{{ pathto('_static/turtini-header.js', 1) }}"></script>
 {% endblock %}
 
 {% block content %}
+  <div class="turtini-global-header" role="navigation" aria-label="Turtini global navigation">
+    <div class="turtini-header-inner">
+      <div class="turtini-header-right">
+        <a href="https://turtini.com/" target="_blank" rel="noopener">Turtini</a>
+        <a href="https://turtini.com/events" target="_blank" rel="noopener">Events</a>
+        <a href="https://trident.turtini.com/login" target="_blank" rel="noopener">Trident</a>
+      </div>
+    </div>
+  </div>
+
   <div class="turtini-banner" role="note" aria-label="Documentation notice">
     <strong>Notice:</strong> This is Turtini’s official plain-language documentation for federal and regulated environments.
   </div>
