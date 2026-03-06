@@ -58,8 +58,7 @@ html_favicon = "_static/favicon.ico"
 
 # Add your shared CSS/JS
 html_css_files = ["turtini.css"]
-# If you add a JS file in the package, uncomment:
-# html_js_files = ["turtini-banner.js"]
+html_js_files = ["turtini-header.js"]
 
 
 # ---- Footer "Last updated" ----
