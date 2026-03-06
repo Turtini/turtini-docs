@@ -39,7 +39,7 @@ h6 {
   margin-bottom: 0.9em;
 }
 
-/* Prevent anchor jumps from hiding headings behind fixed chrome */
+/* Prevent anchor jumps from hiding headings behind sticky UI */
 h1,
 h2,
 h3,
@@ -81,13 +81,11 @@ h6 {
 /* Mobile top nav */
 .wy-nav-top {
   background: var(--turtini-brand-dark) !important;
-  top: 56px;
 }
 
 /* =========================
    Global Top Header
    ========================= */
-
 .turtini-global-header {
   position: sticky;
   top: 0;
@@ -198,7 +196,7 @@ h6 {
    Banner / Notice
    ========================= */
 .turtini-banner {
-  margin: 70px 0 20px 0;
+  margin: 14px 0 20px 0;
   padding: 14px 16px;
   border: 1px solid var(--turtini-border);
   border-left: 6px solid var(--turtini-hover);
