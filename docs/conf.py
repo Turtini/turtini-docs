@@ -7,31 +7,67 @@ from datetime import datetime
 from turtini_sphinx_theme import get_theme_paths
 
 
-# ---- Project metadata ----
+# -----------------------------------------------------
+# Project metadata
+# -----------------------------------------------------
+
 project = "Turtini Documentation"
 author = "Turtini LLC"
 copyright = f"{datetime.utcnow().year}, Turtini LLC"
 
 
-# ---- Extensions ----
+# -----------------------------------------------------
+# Extensions
+# -----------------------------------------------------
+
 extensions = [
     "myst_parser",
 ]
 
 
-# ---- Source config ----
-source_suffix = {".md": "markdown"}
+# -----------------------------------------------------
+# Source configuration
+# -----------------------------------------------------
+
+source_suffix = {
+    ".md": "markdown",
+}
+
 root_doc = "index"
 
-exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
+exclude_patterns = [
+    "_build",
+    "Thumbs.db",
+    ".DS_Store",
+]
 
 
-# ---- Theme ----
+# -----------------------------------------------------
+# Theme configuration
+# -----------------------------------------------------
+
 html_theme = "turtini_sphinx_theme"
-html_theme_path = get_theme_paths()["theme"]
+
+# Load theme from installed package
+html_theme_path = [get_theme_paths()["theme"]]
 
 
-# ---- MyST ----
+# -----------------------------------------------------
+# Branding
+# -----------------------------------------------------
+
+# These should exist in docs/_static/
+html_logo = "_static/turtini-logo.png"
+html_favicon = "_static/favicon.ico"
+
+# Only local static assets (images, etc)
+html_static_path = ["_static"]
+
+
+# -----------------------------------------------------
+# MyST configuration
+# -----------------------------------------------------
+
 myst_enable_extensions = [
     "colon_fence",
     "deflist",
@@ -40,32 +76,24 @@ myst_enable_extensions = [
 ]
 
 
-# ---- Shared theme assets (from turtini-sphinx-theme package) ----
-_paths = get_theme_paths()
+# -----------------------------------------------------
+# Footer / build metadata
+# -----------------------------------------------------
 
-# Look in local repo first, then shared package
-templates_path = ["_templates", _paths["templates"]]
-
-# Copy local static files first, then shared package static files
-html_static_path = ["_static", _paths["static"]]
-
-# These reference the build output _static/ directory, not your repo folder
-html_logo = "_static/turtini-logo.png"
-html_favicon = "_static/favicon.ico"
-
-# Add your shared CSS/JS
-html_css_files = ["turtini.css"]
-# html_js_files = ["turtini-header.js"]
-
-
-# ---- Footer "Last updated" ----
 html_last_updated_fmt = "%B %d, %Y"
 
 
-# ---- Variables for Jinja templates ----
+# -----------------------------------------------------
+# Template variables
+# -----------------------------------------------------
+
 html_context = {
     "turtini_year": datetime.utcnow().year,
 }
 
-# RTD may inject canonical URL; safe default:
+
+# -----------------------------------------------------
+# Base URL (used by Read the Docs)
+# -----------------------------------------------------
+
 html_baseurl = ""
