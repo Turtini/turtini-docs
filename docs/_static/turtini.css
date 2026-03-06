@@ -11,7 +11,7 @@
   --turtini-border: #dbe3f5;
   --turtini-text-muted: #4b5563;
   --turtini-text-muted-2: #6b7280;
-  --turtini-shell-header-height: 52px;
+  --turtini-header-height: 52px;
 }
 
 /* =========================
@@ -78,27 +78,26 @@ h6 {
   background: rgba(255, 255, 255, 0.08);
 }
 
-/* Mobile top nav */
 .wy-nav-top {
   background: var(--turtini-brand-dark) !important;
 }
 
 /* =========================
-   Shell-level global header
+   Global top header
    ========================= */
-.turtini-shell-header {
+.turtini-global-header {
   position: fixed;
   top: 0;
-  left: 300px;
+  left: 300px;   /* RTD desktop sidebar width */
   right: 0;
-  height: var(--turtini-shell-header-height);
+  height: var(--turtini-header-height);
   z-index: 3000;
   background: var(--turtini-brand);
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
 
-.turtini-shell-header-inner {
+.turtini-header-inner {
   max-width: 920px;
   height: 100%;
   margin: 0 auto;
@@ -108,27 +107,32 @@ h6 {
   align-items: center;
 }
 
-.turtini-shell-nav {
+.turtini-header-right {
   display: flex;
   align-items: center;
   gap: 24px;
 }
 
-.turtini-shell-nav a {
+.turtini-global-header a {
   color: #ffffff;
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
 }
 
-.turtini-shell-nav a:hover {
+.turtini-global-header a:hover {
   color: var(--turtini-hover);
   text-decoration: underline;
 }
 
-/* Push the main content below the fixed shell header */
-body.turtini-shell-header-enabled .wy-nav-content {
-  padding-top: calc(var(--turtini-shell-header-height) + 12px);
+/* Push the whole RTD shell down below the fixed header */
+.wy-grid-for-nav {
+  padding-top: var(--turtini-header-height);
+}
+
+/* Keep sidebar aligned below the header */
+.wy-nav-side {
+  top: var(--turtini-header-height);
 }
 
 /* =========================
@@ -230,20 +234,24 @@ h6 {
    Responsive adjustments
    ========================= */
 @media screen and (max-width: 768px) {
-  .turtini-shell-header {
+  .turtini-global-header {
     left: 0;
   }
 
-  .turtini-shell-header-inner {
+  .turtini-header-inner {
     max-width: none;
     padding: 0 16px;
   }
 
-  .turtini-shell-nav {
+  .turtini-header-right {
     gap: 18px;
   }
 
-  body.turtini-shell-header-enabled .wy-nav-content {
-    padding-top: calc(var(--turtini-shell-header-height) + 12px);
+  .wy-grid-for-nav {
+    padding-top: var(--turtini-header-height);
+  }
+
+  .wy-nav-side {
+    top: 0;
   }
 }
