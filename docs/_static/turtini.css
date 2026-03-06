@@ -88,15 +88,17 @@ h6 {
    ========================= */
 .turtini-global-header {
   position: sticky;
-  top: 0;
+  top: 10px;
   z-index: 1000;
   width: 100%;
+  display: block;
+  overflow: hidden;
   background: var(--turtini-brand);
   color: #ffffff;
   font-size: 0.9rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
-  border-radius: 0 0 6px 6px;
+  border-radius: 0;
 }
 
 .turtini-header-inner {
