@@ -91,7 +91,6 @@ h6 {
   top: 0;
   left: 300px;   /* RTD desktop sidebar width */
   right: 0;
-  width: auto;
   z-index: 2000;
   background: var(--turtini-brand);
   color: #ffffff;
@@ -101,9 +100,9 @@ h6 {
 }
 
 .turtini-header-inner {
-  max-width: 1200px;
+  max-width: 920px;   /* match content width */
   margin: 0 auto;
-  padding: 10px 24px;
+  padding: 10px 18px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -116,7 +115,7 @@ h6 {
 .turtini-header-right {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 24px;
 }
 
 .turtini-global-header a {
@@ -129,7 +128,6 @@ h6 {
   color: var(--turtini-hover);
   text-decoration: underline;
 }
-
 /* =========================
    Links
    ========================= */
@@ -197,7 +195,7 @@ h6 {
    Banner / Notice
    ========================= */
 .turtini-banner {
-  margin: 72px 0 20px 0;
+  margin: 64px 0 20px 0;
   padding: 14px 16px;
   border: 1px solid var(--turtini-border);
   border-left: 6px solid var(--turtini-hover);
@@ -253,9 +251,11 @@ h6 {
 @media screen and (max-width: 768px) {
   .turtini-global-header {
     left: 0;
+    right: 0;
   }
 
   .turtini-header-inner {
+    max-width: none;
     padding: 10px 16px;
   }
 
@@ -264,6 +264,6 @@ h6 {
   }
 
   .turtini-banner {
-    margin-top: 72px;
+    margin-top: 64px;
   }
 }
