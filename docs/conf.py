@@ -46,11 +46,11 @@ myst_enable_extensions = [
 # ---- Shared theme assets (from turtini-sphinx-theme package) ----
 _paths = get_theme_paths()
 
-# Use the package templates FIRST so it overrides the RTD theme layout
-templates_path = [_paths["templates"]]
+# Look in local repo first, then shared package
+templates_path = ["_templates", _paths["templates"]]
 
-# Sphinx will copy these into _static at build time
-html_static_path = [_paths["static"]]
+# Copy local static files first, then shared package static files
+html_static_path = ["_static", _paths["static"]]
 
 # These reference the build output _static/ directory, not your repo folder
 html_logo = "_static/turtini-logo.png"
