@@ -1,6 +1,6 @@
 # Resources & Training Loop by Turtini
 
-Welcome to Turtini’s resoures and Training Loop platform.
+Welcome to Turtini’s resources and Training Loop platform.
 
 This site consolidates governance guidance, security frameworks, and regulated platform documentation aligned with U.S. federal environments. It also includes short operational demos for learning real infrastructure workflows.
 
