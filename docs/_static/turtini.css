@@ -4,13 +4,14 @@
 
 /* --- Brand knobs --- */
 :root {
-  --turtini-brand: #2a53cd;       /* primary */
-  --turtini-brand-dark: #2a53cd;  /* hover/darker */
-  --turtini-accent: #1dd29f;      /* accent */
-  --turtini-hover: #99d8e9;       /* hover/link accent */
-  --turtini-border: #dbe3f5;      /* soft border */
-  --turtini-text-muted: #4b5563;  /* footer text */
+  --turtini-brand: #2a53cd;
+  --turtini-brand-dark: #2a53cd;
+  --turtini-accent: #1dd29f;
+  --turtini-hover: #99d8e9;
+  --turtini-border: #dbe3f5;
+  --turtini-text-muted: #4b5563;
   --turtini-text-muted-2: #6b7280;
+  --turtini-shell-header-height: 52px;
 }
 
 /* =========================
@@ -39,7 +40,6 @@ h6 {
   margin-bottom: 0.9em;
 }
 
-/* Prevent anchor jumps from hiding headings behind sticky UI */
 h1,
 h2,
 h3,
@@ -84,50 +84,53 @@ h6 {
 }
 
 /* =========================
-   Global Top Header
+   Shell-level global header
    ========================= */
-.turtini-global-header {
+.turtini-shell-header {
   position: fixed;
   top: 0;
-  left: 300px;   /* RTD desktop sidebar width */
+  left: 300px;
   right: 0;
-  z-index: 2000;
+  height: var(--turtini-shell-header-height);
+  z-index: 3000;
   background: var(--turtini-brand);
-  color: #ffffff;
-  font-size: 0.9rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
 
-.turtini-header-inner {
-  max-width: 920px;   /* match content width */
+.turtini-shell-header-inner {
+  max-width: 920px;
+  height: 100%;
   margin: 0 auto;
-  padding: 10px 18px;
+  padding: 0 18px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
-.turtini-header-left {
-  display: none;
-}
-
-.turtini-header-right {
+.turtini-shell-nav {
   display: flex;
   align-items: center;
   gap: 24px;
 }
 
-.turtini-global-header a {
+.turtini-shell-nav a {
   color: #ffffff;
   text-decoration: none;
   font-weight: 600;
+  font-size: 0.95rem;
 }
 
-.turtini-global-header a:hover {
+.turtini-shell-nav a:hover {
   color: var(--turtini-hover);
   text-decoration: underline;
 }
+
+/* Push the main content below the fixed shell header */
+body.turtini-shell-header-enabled .wy-nav-content {
+  padding-top: calc(var(--turtini-shell-header-height) + 12px);
+}
+
 /* =========================
    Links
    ========================= */
@@ -195,7 +198,7 @@ h6 {
    Banner / Notice
    ========================= */
 .turtini-banner {
-  margin: 64px 0 20px 0;
+  margin: 14px 0 20px 0;
   padding: 14px 16px;
   border: 1px solid var(--turtini-border);
   border-left: 6px solid var(--turtini-hover);
@@ -204,28 +207,6 @@ h6 {
   border-radius: 6px;
   font-size: 0.95rem;
   line-height: 1.5;
-}
-
-/* Optional sticky banner variation */
-.turtini-banner--sticky {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: var(--turtini-brand);
-  color: #fff;
-  padding: 10px 16px;
-  font-size: 14px;
-  line-height: 1.2;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.turtini-banner--sticky a {
-  color: #fff;
-  text-decoration: underline;
-}
-
-.turtini-banner--sticky a:hover {
-  color: rgba(255, 255, 255, 0.9);
 }
 
 /* =========================
@@ -249,21 +230,20 @@ h6 {
    Responsive adjustments
    ========================= */
 @media screen and (max-width: 768px) {
-  .turtini-global-header {
+  .turtini-shell-header {
     left: 0;
-    right: 0;
   }
 
-  .turtini-header-inner {
+  .turtini-shell-header-inner {
     max-width: none;
-    padding: 10px 16px;
+    padding: 0 16px;
   }
 
-  .turtini-header-right {
+  .turtini-shell-nav {
     gap: 18px;
   }
 
-  .turtini-banner {
-    margin-top: 64px;
+  body.turtini-shell-header-enabled .wy-nav-content {
+    padding-top: calc(var(--turtini-shell-header-height) + 12px);
   }
 }
