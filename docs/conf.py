@@ -72,8 +72,8 @@ html_css_files = [
 # Branding
 # -----------------------------------------------------
 
-html_logo = "turtini-logo.png"
-html_favicon = "favicon.ico"
+html_logo = "_static/turtini-logo.png"
+html_favicon = "_static/favicon.ico"
 
 
 # -----------------------------------------------------
