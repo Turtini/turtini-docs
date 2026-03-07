@@ -63,13 +63,17 @@ _paths = get_theme_paths()
 templates_path = [_paths["templates"]]
 html_static_path = ["_static", _paths["static"]]
 
+html_css_files = [
+    "turtini.css",
+]
+
 
 # -----------------------------------------------------
 # Branding
 # -----------------------------------------------------
 
-html_logo = "_static/turtini-logo.png"
-html_favicon = "_static/favicon.ico"
+html_logo = "turtini-logo.png"
+html_favicon = "favicon.ico"
 
 
 # -----------------------------------------------------
