@@ -72,7 +72,7 @@ html_css_files = [
 # Branding
 # -----------------------------------------------------
 
-html_logo = "turtini-logo-white.png"
+html_logo = "_static/turtini-logo-white.png"
 html_favicon = "_static/favicon.ico"
 
 
