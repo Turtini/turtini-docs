@@ -20,5 +20,6 @@ This site consolidates governance guidance, security frameworks, and regulated p
 ![Training Loop](_static/training-loop-logo.png)
 </div>
 
-- [**AWS EC2 VM Creation Demo**](https://docs.turtini.com/projects/aws-vm-demo/en/latest/README.html#)
-- [**OpenShift Virtualization VM Creation Demo**](https://docs.turtini.com/projects/openshift-vm-demo/en/latest/)
+- [**AWS EC2 VM Creation**](https://docs.turtini.com/projects/aws-vm-demo/en/latest/README.html#)
+- [**OpenShift Virtualization VM Creation**](https://docs.turtini.com/projects/openshift-vm-demo/en/latest/)
+- [**OpenShift Projects & Users**](https://docs.turtini.com/projects/openshift-projects-users/en/latest/README.html)
