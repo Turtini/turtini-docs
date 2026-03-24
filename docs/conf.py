@@ -74,6 +74,8 @@ html_css_files = [
 
 html_logo = "_static/turtini-logo-white.png"
 html_favicon = "_static/favicon.ico"
+html_title = "Docs"
+html_short_title = "Docs"
 
 
 # -----------------------------------------------------
