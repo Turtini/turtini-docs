@@ -1,4 +1,4 @@
-# Docs & Training Loop by Turtini
+# Docs
 
 Welcome to Turtini’s Docs and Training Loop platform.
 
